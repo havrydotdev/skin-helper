@@ -1,6 +1,8 @@
 package org.havry
 
+import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
+import org.havry.integrations.SkinHelperPAPI
 import org.havry.listeners.JoinListener
 import org.mineskin.MineskinClient
 import java.net.http.HttpClient
@@ -28,5 +30,9 @@ class SkinHelper : JavaPlugin() {
         saveDefaultConfig()
         config.options().copyDefaults(true)
         saveConfig()
+
+        if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
+            SkinHelperPAPI().register()
+        }
     }
 }

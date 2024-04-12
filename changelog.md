@@ -1,3 +1,0 @@
-- [Fix authentication issue](https://github.com/Iru21/Authy/commit/553794ffcbb3006609336489b2e3cf334f0b6bc1)
-- [Fix blocking inventory interaction](https://github.com/Iru21/Authy/commit/16b6749a71526d1477a13223f005770703c3da78)
-- [Fix driver build](https://github.com/Iru21/Authy/commit/0cc085ba025344189f0e44d99c237b881a7cef0c)

@@ -77,14 +77,22 @@ tasks {
 repositories {
     mavenCentral()
     mavenLocal()
-    maven { setUrl("https://jitpack.io") }
+    maven(url = "https://jitpack.io")
     maven(url = "https://repo.inventivetalent.org/repository/public")
+    maven(url = "https://repo.extendedclip.com/content/repositories/placeholderapi/")
 }
 
 dependencies {
+    // PlaceholderAPI hook
+    compileOnly("me.clip:placeholderapi:2.11.5") {
+        isTransitive = false
+    }
+
+    // Paper support
     compileOnly("com.destroystokyo.paper:paper-api:1.12.2-R0.1-SNAPSHOT") {
         isTransitive = false
     }
+
     implementation("com.github.gavrylenkoIvan:block-client:1.0.4")
     implementation("org.mineskin:java-client:1.2.4-SNAPSHOT")
     implementation(kotlin("stdlib-jdk8"))

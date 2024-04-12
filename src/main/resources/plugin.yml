@@ -3,3 +3,5 @@ version: ${pluginVersion}
 author: Havrylenko Ivan
 main: org.havry.SkinHelper
 api-version: ${minecraftVersion}
+
+softdepend: [PlaceholderAPI]

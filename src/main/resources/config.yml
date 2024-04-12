@@ -1,3 +1,8 @@
 api:
   url: http://localhost:3000
   api_key: api_key
+
+world_tab_prefixes:
+  end: "&d"
+  normal: "&a"
+  nether: "&c"

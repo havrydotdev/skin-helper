@@ -21,7 +21,7 @@ class SkinHelperPAPI : PlaceholderExpansion() {
     }
 
     override fun getVersion(): String {
-        return "1.2.1"
+        return "1.3.0"
     }
 
     override fun persist(): Boolean {
@@ -47,7 +47,11 @@ class SkinHelperPAPI : PlaceholderExpansion() {
     }
 
     private fun getTextureId(player: OfflinePlayer?): String {
-        return if (player == null) steveTextureId
-            else blockClient.getSkin(player.uniqueId).get().textureId
+        if (player == null) {
+            return steveTextureId
+        }
+
+        val skin = blockClient.getSkin(player.uniqueId).get()
+        return skin?.textureId ?: steveTextureId
     }
 }
